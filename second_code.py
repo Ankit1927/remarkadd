@@ -4,7 +4,7 @@ def add_remark(df):
     for index, row in df.iterrows():
         if "UPI" in row['Narration'] and pd.notnull(row['Deposit Amt.']) <= 999 :
             if pd.isnull(row['REMARK']):
-                df.at[index, 'REMARK'] = "PERSONAL USE ONLINE CREDIT"
+                df.at[index, 'REMARK'] = "PERSONAL USE ONLINE DEBIT"
     return df
 
 def main():
